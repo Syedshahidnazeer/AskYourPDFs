@@ -1,0 +1,101 @@
+/* styles/main.css */
+
+:root {
+    --primary-color: #3498db; /* Define a primary color variable */
+    --font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    font-family: var(--font-family); /* Use the variable */
+    margin: 0; /* Remove default body margin */
+}
+
+.stApp {
+    max-width: 90%;  /* Make the app responsive */
+    margin: 20px auto; /* Center the app */
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 8px;  /* Add rounded corners */
+}
+
+
+/* Typography */
+h1, h2, h3 {
+  font-family: var(--font-family);
+  color: #333;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+
+/* Input Fields */
+.stTextInput > div > div > input {
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%; /* Make input fields responsive */
+    transition: all 0.3s ease;
+}
+
+.stTextInput > div > div > input:focus {
+    border-color: darken(var(--primary-color), 10%);  /* Darken on focus (if your CSS preprocessor supports it) */
+    box-shadow: 0 0 5px rgba(var(--primary-color-rgb), 0.5); /* Use RGBa for box shadow */
+    outline: none; /* Remove default focus outline */
+}
+
+
+/* File Uploader */
+.stUploadedFile {
+    border: 2px dashed #ddd;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.stUploadedFile:hover {
+    background-color: #f9f9f9;
+}
+
+
+/* Success Message */
+.stSuccess {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+
+/* Response Area */
+.stMarkdown p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #444; /* Slightly darker text */
+}
+
+
+/* Lottie Animations */
+.lottie-container {  /* Add a class for Lottie containers */
+    display: flex;  /* Center the animations */
+    justify-content: center;
+    margin-bottom: 20px; /* Add spacing below animations */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {  /* Adjust for smaller screens */
+    .stApp {
+        padding: 15px;  /* Reduce padding */
+    }
+    h1 {
+        font-size: 2rem; /* Smaller heading */
+    }
+
+}

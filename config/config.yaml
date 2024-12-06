@@ -1,0 +1,17 @@
+# config/config.yaml
+app:
+  title: PDF RAG Assistant
+  description: Upload PDFs and get intelligent insights
+
+embedding:
+  model_name: all-MiniLM-L6-v2
+  dimension: 384
+
+vectorstore:
+  index_path: ./vectorstore
+  top_k_retrieval: 3
+
+gemini:
+  model: gemini-pro
+  max_tokens: 1024
+  temperature: 0.7
